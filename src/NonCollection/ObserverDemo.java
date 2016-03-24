@@ -20,6 +20,7 @@ class Watcher implements Observer{
 }
 
 class BeingWatched extends Observable{
+	
 	void counter(int period) {
 		for( ; period >=0; period--) {
 			setChanged();
