@@ -59,6 +59,7 @@ class BasicReflection {
 			Class<?> cl = br.getClass();
 			
 			Method method = cl.getMethod("myFunction", String.class, int.class);
+			System.out.println("----------------------------------------");
 			System.out.println("Value of Method.getMethod is :"+method);
 			method.getAnnotation(myAnnotation.class);
 			
@@ -68,6 +69,8 @@ class BasicReflection {
 			System.out.println(ex);
 		}
 	}
+	
+	
 	public static void main(String[] args) {
 		myFunction();
 		myFunction("Banerjee", 2000);

@@ -13,7 +13,7 @@ class ValidQueue{
 			}
 		}
 
-		System.out.println("GET:: "+value);
+		System.out.print("Hello ");
 		valueSet = false;
 		notify();
 		/*try{
@@ -33,7 +33,7 @@ class ValidQueue{
 			}
 		}
 		value = v;
-		System.out.println("PUT:: "+value);
+		System.out.println("World");
 		valueSet = true;
 		notify();
 		/*try{

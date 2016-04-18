@@ -12,7 +12,7 @@ public class ImmutableString {
 		myname = myname.concat(" banerjee");
 		System.out.println(myname+" "+mySecondNm);
 		
-		myname.concat("21786");  //This will not add any thing
+		myname.concat("21786");  //This will not add any thing: Assignment missing
 		System.out.println(myname+" "+mySecondNm);
 
 	}

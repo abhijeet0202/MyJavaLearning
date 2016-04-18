@@ -8,12 +8,9 @@ package AutoBoxing;
 import java.io.*;
 
 final class parseNumber {
-	public static void main(String args[])
-			throws IOException
-	{
+	public static void main(String args[]) throws IOException{
 		// create a BufferedReader using System.in
-		BufferedReader br = new
-				BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str;
 		int i;
 		int sum=0;

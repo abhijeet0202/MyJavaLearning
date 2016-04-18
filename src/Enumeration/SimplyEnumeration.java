@@ -12,7 +12,7 @@ class SimplyEnumeration {
 
 		//Comparing Enums
 		if (ap == Apple.GoldenDel){
-			System.out.println("Cuurently Enum Variable Conatins: "+ap);
+			System.out.println("Currently Enum Variable Conatins: "+ap);
 		}
 		
 		//Using Swith Cases
