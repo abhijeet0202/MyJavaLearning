@@ -1,7 +1,7 @@
 package MultiThreading;
 
 class ValidQueue{
-	int value;
+	int value =0;
 	boolean valueSet = false;
 
 	synchronized int get(){
@@ -16,11 +16,11 @@ class ValidQueue{
 		System.out.print("Hello ");
 		valueSet = false;
 		notify();
-		/*try{
-		Thread.sleep(10);
+		try{
+		Thread.sleep(1000);
 		} catch (InterruptedException ex){
 				System.out.println(ex);
-			}*/
+			}
 		return value;
 	}
 
@@ -33,14 +33,14 @@ class ValidQueue{
 			}
 		}
 		value = v;
-		System.out.println("World");
+		System.out.println("World :"+ value);
 		valueSet = true;
 		notify();
-		/*try{
-			Thread.sleep(10);
+		try{
+			Thread.sleep(1000);
 			} catch (InterruptedException ex){
 					System.out.println(ex);
-				}*/
+				}
 	}
 }
 

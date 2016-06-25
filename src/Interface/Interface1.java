@@ -7,7 +7,7 @@ package Interface;
  * @author abhibane
  *
  */
-public interface Interface1 {
+interface Interface1 {
 
 	void func();
 	int i =0;

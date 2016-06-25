@@ -12,16 +12,19 @@ class HiLoPriority implements Runnable{
 	}
 	@Override
 	public void run() {
+		System.out.println("Inside Run: ");
 		while (running)
 			++click;
 	}
 	
 	public void start(){
+		System.out.println("Inside Start: ");
 		running = true;
 		t.start();
 	}
 	
 	public void stop(){
+		System.out.println("Inside Stop: ");
 		running = false;
 	}
 }

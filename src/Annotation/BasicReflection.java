@@ -70,7 +70,6 @@ class BasicReflection {
 		}
 	}
 	
-	
 	public static void main(String[] args) {
 		myFunction();
 		myFunction("Banerjee", 2000);

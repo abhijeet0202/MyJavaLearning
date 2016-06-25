@@ -36,6 +36,12 @@ final class ArrayListBasic {
 		 */
 		obj.remove("Abhijeet1");
 		System.out.println("Content of ArrayList is: "+obj);
+		
+		obj.add(2, "Lakhan");
+		System.out.println("Content of ArrayList is: "+obj);
+		
+		obj.set(2, "Ram");
+		System.out.println("Content of ArrayList is: "+obj);
 	}
 
 }
