@@ -25,7 +25,6 @@ public class Hello {
 		double y =2.2;
 		getFactor(x,y);
 		getGUID();
-
 	}
 
 	public static double getFactor(byte x, double y) {
