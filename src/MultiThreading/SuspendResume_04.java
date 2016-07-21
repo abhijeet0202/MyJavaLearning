@@ -35,7 +35,7 @@ class ThreadClass implements Runnable{
 		notify();
 	}
 }
-class SuspendResume {
+public class SuspendResume_04 {
 
 	public static void main(String[] args) {
 		ThreadClass ob1 = new ThreadClass("One");

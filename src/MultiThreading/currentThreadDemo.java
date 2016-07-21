@@ -8,7 +8,6 @@ package MultiThreading;
  *
  */
 public class currentThreadDemo {
-
 	/**
 	 * @param args
 	 */
@@ -24,7 +23,7 @@ public class currentThreadDemo {
 		
 		try{
 			for (int i = 0; i<= 5; i++){
-				System.out.println("Value of i:"+i);
+				System.out.println("Value of i :"+i);
 				Thread.sleep(1000);
 			}
 		}catch(InterruptedException exp) {

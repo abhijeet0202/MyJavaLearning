@@ -29,7 +29,7 @@ class HiLoPriority implements Runnable{
 	}
 }
 
-public class ThreadPriorities {
+public class ThreadPriorities_02 {
 
 	
 	public static void main(String[] args) {

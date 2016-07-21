@@ -9,7 +9,7 @@ import java.sql.Date;
  * @author abhibane
  *
  */
-public class ThreadInterfaceRunnable {
+public class ThreadInterfaceRunnable_01 {
 
 	public static void main(String[] args) {
 		new ThreadDemo();

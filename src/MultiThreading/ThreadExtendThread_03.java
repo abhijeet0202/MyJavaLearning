@@ -1,6 +1,6 @@
 package MultiThreading;
 
-public class ThreadExtendThread {
+public class ThreadExtendThread_03 {
 
 	public static void main(String[] args) {
 		new ThreadExtendDemo();
