@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.Lock;
 import java.util.Date;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
