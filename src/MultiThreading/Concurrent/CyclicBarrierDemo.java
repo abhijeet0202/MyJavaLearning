@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.Concurrent;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
