@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.Concurrent;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
