@@ -43,7 +43,7 @@ public class SendVoiceMail {
 		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 		headers.add(HttpHeaders.AUTHORIZATION, "Basic " +basicAuth);
 		
-		String subject = "Voicemail from Prashant Prashant (ext - 1037)"; 
+		String subject = "Voicemail from Abhijeet Banerjee (ext - 1037)"; 
 		String message = String.format("{\"Subject\" : \"%s\", \"Sensitivity\" : \"Normal\", \"Priority\" : \"Normal\" }", subject);
 
 		// creating an HttpEntity for the message part
@@ -66,7 +66,6 @@ public class SendVoiceMail {
 		InputStream audioStream = new FileInputStream("C:/Users/abhibane/Desktop/cumi/AvAfterMsgMenu001.wav");
 		ByteArrayResource byteArrayResource = new ByteArrayResource(IOUtils.toByteArray(audioStream));
 		HttpEntity<ByteArrayResource> audioHttpEntity = new HttpEntity<>(byteArrayResource, audioHeader);
-		//audioStream.close();
 
 
 		LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
@@ -78,18 +77,7 @@ public class SendVoiceMail {
 		map, headers);
 		System.out.println(requestEntity.getBody());
 		System.out.println(requestEntity.getHeaders());
-		/*LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-		map.add("filename", voiceMessage);
-		map.add("ArrivalTime", 0);
-		map.add("fromSub", false);
-		map.add("fromVmIntSub", false);
-		map.add("ctr", file1);
-		map.add("ctr1", file2);
-
-		HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity = new HttpEntity<LinkedMultiValueMap<String, Object>>(
-				map, headers);
-		System.out.println(requestEntity);
-*/		entity = restTemplate.exchange(requestUrl, HttpMethod.POST, requestEntity, String.class);
+		entity = restTemplate.exchange(requestUrl, HttpMethod.POST, requestEntity, String.class);
 		System.out.println(entity.getStatusCode());
 			}
 
