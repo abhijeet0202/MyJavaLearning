@@ -11,6 +11,7 @@ import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.routing.HttpRoute;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.conn.ssl.AllowAllHostnameVerifier;
 import org.apache.http.conn.ssl.DefaultHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLInitializationException;
@@ -68,8 +69,8 @@ public class HttpClientUtils {
                     sslcontext, 
                     new String[] { "TLSv1" },      /*supported protocols*/
                     null,                          /*supported cipher suites*/
-                    new DefaultHostnameVerifier()  /*verifies the host(to which we are requesting)
-                                                     with the host provided in certificate by server */
+                    new AllowAllHostnameVerifier()
+                    //new DefaultHostnameVerifier()  /*verifies the host(to which we are requesting)with the host provided in certificate by server */
                     );
             
             // registering factory for different schemes (http/https)

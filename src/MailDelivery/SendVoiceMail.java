@@ -20,7 +20,9 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 public class SendVoiceMail {
-	private static String requestUrl = "https://bgl-cxn-st-3.cisco.com:8443/vmrest/messages?userobjectid=9d7f24aa-8e59-4d67-9e43-7dd55d90040e";
+	//Abhijeet (Normal User ESN:21786)
+	//private static String requestUrl = "https://ucbu-aricent-vm632.cisco.com:8443/vmrest/messages?userobjectid=6cc9cc65-2150-4ce3-8310-b0f52bf104e7";
+	private static String requestUrl = "https://ucbu-aricent-vm632.cisco.com:8443/vmrest/messages";
 	File file1 = null;
 	File file2 = null;
 	File voiceMessage = null;
@@ -36,22 +38,26 @@ public class SendVoiceMail {
 		RestTemplate restTemplate = new RestTemplate(getClientHttpRequestFactory(true));
 		restTemplate.setErrorHandler(new ErrorResponseHandler());
 
-		String userPassword = "Abhijeet:Ecsbulab1";
+		//A user who have MailBox right(Acces Token)
+		String userPassword = "Aryan:Ecsbulab1";
 		String basicAuth = Base64.getEncoder().encodeToString(userPassword.getBytes());
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 		headers.add(HttpHeaders.AUTHORIZATION, "Basic " +basicAuth);
 		
-		String subject = "Voicemail from Abhijeet Banerjee (ext - 1037)"; 
-		String message = String.format("{\"Subject\" : \"%s\", \"Sensitivity\" : \"Normal\", \"Priority\" : \"Normal\" }", subject);
+		String subject = "Voicemail from Aryan banerjee (ext - 21786)"; 
+		//String message = String.format("{\"Subject\" : \"%s\", \"Sensitivity\" : \"Normal\", \"Priority\" : \"Normal\", \"ReadReceiptRequested\" : \"false\", \"DeliveryReceiptRequested\" : \"false\" }", subject);
+		//String message = String.format("{\"Subject\" : \"%s\", \"Sensitivity\" : \"Normal\", \"Priority\" : \"Normal\" }", subject);
+		String message = String.format("{\"Subject\" : \"%s\", \"Sensitivity\" : \"Normal\", \"Priority\" : \"%s\", \"ArrivalTime\" : \"%d\", \"CallerId\" : \"+123456\", }", subject,"Urgent",1140331262);
 
 		// creating an HttpEntity for the message part
 		HttpHeaders messageHeader = new HttpHeaders();
 		messageHeader.setContentType(MediaType.APPLICATION_JSON);
 		HttpEntity<String> messageHttpEntity = new HttpEntity<>(message, messageHeader);
 
-		String calleeObjectId = "8ccfcf71-0c07-4dfc-b1c4-00933ba72d13";
+		//Receiver(Surbhi)
+		String calleeObjectId = "a3ad9bc3-5415-4782-8671-8b9da934ed41";
 		String recipient = String.format("{\"Recipient\" : { \"Type\": \"TO\", \"Address\" : { \"Type\": \"SUBSCRIBER\", \"ObjectId\" : \"%s\"} } }", 
 		calleeObjectId);
 
@@ -79,6 +85,8 @@ public class SendVoiceMail {
 		System.out.println(requestEntity.getHeaders());
 		entity = restTemplate.exchange(requestUrl, HttpMethod.POST, requestEntity, String.class);
 		System.out.println(entity.getStatusCode());
+		System.out.println(entity.getBody());
+		System.out.println(entity.getHeaders());
 			}
 
 	/**
