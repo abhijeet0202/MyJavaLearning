@@ -42,6 +42,11 @@ final class ArrayListBasic {
 		
 		obj.set(2, "Ram");
 		System.out.println("Content of ArrayList is: "+obj);
+		
+		obj.add(3,null);
+		
+		obj.get(3);
+		System.out.println(obj.get(3));
 	}
 
 }

@@ -46,10 +46,8 @@ class MyClass {
         final int prime = 31;
         System.out.println("b");
         int result = 1;
-        System.out.println(result = prime * result);
         result = prime * result
                 + ((importantField == null) ? 0 : importantField.hashCode());
-        System.out.println(result = prime * result);
         System.out.println("c");
         System.out.println(result);
         return result;

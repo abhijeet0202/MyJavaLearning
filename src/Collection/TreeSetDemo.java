@@ -29,6 +29,7 @@ final class TreeSetDemo {
 		hs.add("E");
 		hs.add("B");
 		hs.add("z");
+		//hs.add(null);
 
 
 		System.out.println("Value Present In HashSet is: "+hs);

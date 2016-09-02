@@ -16,11 +16,11 @@ class ValidQueue{
 		System.out.print("Hello ");
 		valueSet = false;
 		notify();
-		try{
+		/*try{
 		Thread.sleep(1000);
 		} catch (InterruptedException ex){
 				System.out.println(ex);
-			}
+			}*/
 		return value;
 	}
 
@@ -36,11 +36,11 @@ class ValidQueue{
 		System.out.println("World :"+ value);
 		valueSet = true;
 		notify();
-		try{
+		/*try{
 			Thread.sleep(1000);
 			} catch (InterruptedException ex){
 					System.out.println(ex);
-				}
+				}*/
 	}
 }
 
@@ -73,7 +73,7 @@ class ValidConsumer implements Runnable{
 		}
 	}
 }
-public class InterThreadProducerConsumer {
+public class HelloWorldSyncronized {
 
 	public static void main(String[] args) {
 		ValidQueue queue = new ValidQueue();
