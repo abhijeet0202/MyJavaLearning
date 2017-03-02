@@ -11,7 +11,7 @@ class Outer{
 	}
 	
 	//this is inner class
-	class Inner{
+	private class Inner{
 		private int inner_x = 20;
 		Outer out = new Outer();
 		
@@ -22,7 +22,7 @@ class Outer{
 		}
 	}
 	
-	static class InnerAgain{
+	class InnerAgain extends Inner{
 		private int inner_x = 20;
 		Outer out = new Outer();
 		

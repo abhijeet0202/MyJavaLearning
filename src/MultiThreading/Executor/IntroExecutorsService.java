@@ -9,7 +9,7 @@ class ImplementRun implements Runnable{
 	public void run(){
 		
 		for (int i =0; i <5 ;i++){
-		System.out.println("Thread Name: "+ Thread.currentThread().getName()+" Counter :"+i);
+		System.out.println("Thread Name: "+ Thread.currentThread().getName()+" Counter :"+i+ "Timer : "+ System.currentTimeMillis());
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
@@ -32,10 +32,9 @@ public class IntroExecutorsService {
 		pool.execute(ir1);
 		pool.execute(ir2);
 		pool.execute(ir3);
-		
+	
 		pool.shutdown();
-		
-			
+	
 	}
 
 }

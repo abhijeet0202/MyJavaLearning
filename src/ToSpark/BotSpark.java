@@ -17,14 +17,16 @@ import org.springframework.web.client.RestTemplate;
 
 public class BotSpark {
 	void doVM2Spark() throws IOException {
-		String htmlSubject = "On behalf Of <b>[Abhijeet Banerjee]</b>: \nI'll Join Office In Second Half ";
-		//String prashantVM2SBotAccessToken = "MjFiZjk2MTQtMzA0Mi00YzZlLWI0OWEtZWQ5MDc0NGY2MGMyYTJkN2ViM2UtY2Q4";
+		String htmlSubject = "On behalf Of <b>[Abhijeet Banerjee]</b>: \nHello Kiran";
+		
 		String BotAccessToken = "ZTQwZjk4NDEtZjJkYy00YjZmLTlkNjEtYWU4OGYzYThmMzI2Zjg1ZmNjMjktZjFl";
 		//String toPersonId = "dda16775-c8e2-455b-ada2-bea3d2ff3750";
+		
 		//String fileName = "VM_Prashant_1432675469.wav";
 		String fileName = "VM_Abhijeet_21786.jpg";
+		
 		//InputStream audioStream = new FileInputStream("C:\\Users\\abhibane\\Downloads\\VM_Prashant_1432675469.wav");
-		InputStream audioStream = new FileInputStream("C:\\images\\PTO.gif");
+		InputStream audioStream = new FileInputStream("D:\\index.png");
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
@@ -45,10 +47,10 @@ public class BotSpark {
 		// parts.add("text", htmlSubject);
 		// only works is the bot is part of the room already
 		//Avril-Radical
-		parts.add("roomId", "0b8c52c0-6748-11e5-b89b-d1899e57723e");
+		//parts.add("roomId", "0b8c52c0-6748-11e5-b89b-d1899e57723e");
 		//Avril
 		//parts.add("roomId", "9bb44e30-481b-11e5-b95d-11e69f10463f");
-		//parts.add("toPersonEmail", "abhibane@cisco.com");
+		parts.add("toPersonEmail", "kiransin@cisco.com");
 
 		HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity = new HttpEntity<LinkedMultiValueMap<String, Object>>(
 				parts, headers);
