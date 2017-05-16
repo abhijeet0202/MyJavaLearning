@@ -1,32 +1,27 @@
 package JavaLang;
 
-final class CloneMain implements Cloneable {
-	int a;
-	double d;
-
-	CloneMain cloneTest(){
-		try{
-			return (CloneMain) super.clone();
-		}
-		catch (CloneNotSupportedException ex){
-			System.out.println(ex);
-			return this;
-		}
+public class CloneDemo implements Cloneable{
+	public String str = null;
+	
+	public CloneDemo() {
+		str = new String("Abhijeet");
 	}
-}
 
-public class CloneDemo{
 	public static void main(String[] args) {
+		CloneDemo cloneDemo = new CloneDemo();
+		System.out.println(cloneDemo);
+		System.out.println(Integer.toHexString(cloneDemo.str.hashCode()));
 		
-		CloneMain cd = new CloneMain();
-		CloneMain clone;
+		try {
+			CloneDemo cloning = (CloneDemo) cloneDemo.clone();
+			System.out.println(cloning);
+			System.out.println(Integer.toHexString(cloning.str.hashCode()));
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		cd.a = 10;
-		cd.d = 12.5;
-		
-		clone = cd.cloneTest();
-		
-		System.out.println("cd: " + cd.a + " " + cd.d);
-		System.out.println("clone: " + clone.a + " " + clone.d);
+
 	}
+
 }
