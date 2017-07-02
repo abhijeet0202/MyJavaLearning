@@ -16,11 +16,6 @@ class ValidQueue{
 		System.out.print("Hello ");
 		valueSet = false;
 		notify();
-		/*try{
-		Thread.sleep(1000);
-		} catch (InterruptedException ex){
-				System.out.println(ex);
-			}*/
 		return value;
 	}
 
@@ -36,11 +31,7 @@ class ValidQueue{
 		System.out.println("World :"+ value);
 		valueSet = true;
 		notify();
-		/*try{
-			Thread.sleep(1000);
-			} catch (InterruptedException ex){
-					System.out.println(ex);
-				}*/
+		
 	}
 }
 

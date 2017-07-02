@@ -1,5 +1,6 @@
 package MultiThreading;
 
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadsPrintNumInSeq {
@@ -7,20 +8,23 @@ public class ThreadsPrintNumInSeq {
 	
 
 	public static void main(String[] args) {
-		// ThreadsPrintNumInSeq numInSeq = new ThreadsPrintNumInSeq();
-		Thread t1 = new Thread(new Printer(1, 3), "T1");
-		Thread t2 = new Thread(new Printer(2, 3), "T2");
-		Thread t3 = new Thread(new Printer(3, 3), "T3");
+		System.out.println("Enter Total No. of Thread");
+		int numOfThreads= new Scanner(System.in).nextInt();
+		for (int i = 1;i <=numOfThreads;i++){
+			new Thread(new Printer(i, numOfThreads), "T"+i).start();;
+		}
+		//Thread t1 = new Thread(new Printer(1, 3), "T1");
+		//Thread t2 = new Thread(new Printer(2, 3), "T2");
+		//Thread t3 = new Thread(new Printer(3, 3), "T3");
 
-		t1.start();
-		t3.start();
-		t2.start();
+		//t1.start();
+		//t3.start();
+		//t2.start();
 	}
 
 }
 
 class Printer implements Runnable {
-	public Object monitor = new Object();
 	public volatile static AtomicInteger number = new AtomicInteger(1);
 	int threadId;
 	int numOfThreads;

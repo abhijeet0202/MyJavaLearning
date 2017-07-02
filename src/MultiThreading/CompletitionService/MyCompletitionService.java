@@ -37,8 +37,8 @@ public class MyCompletitionService {
 		taskList.add(new MyTask(3000));
 		taskList.add(new MyTask(2000));
 		taskList.add(new MyTask(1000));
-		usingExecutorService(taskList);
-		//usingCompletitionService(taskList);
+		//usingExecutorService(taskList);
+		usingCompletitionService(taskList);
 	}
 	
 	public static void usingExecutorService(List<MyTask> taskList) throws InterruptedException, ExecutionException{
