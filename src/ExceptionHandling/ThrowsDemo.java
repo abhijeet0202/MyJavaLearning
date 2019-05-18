@@ -7,13 +7,13 @@ public class ThrowsDemo {
 			throwsFunc();
 		}
 		catch (NullPointerException ex){
-			System.out.println("helo");
+			System.out.println("NullPointerException");
 		}
 		catch (IllegalAccessException ex){
-			System.out.println("helo");
+			System.out.println("IllegalAccessException");
 		}
 		catch (ArithmeticException ex){
-			System.out.println("helo");
+			System.out.println("ArithmeticException");
 		}
 		
 	}

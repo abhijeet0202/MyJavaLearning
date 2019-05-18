@@ -17,7 +17,6 @@ class MyCallable implements Callable<Integer> {
 }
 
 public class IntroCallable {
-
 	public static void main(String[] args) {
 
 		FutureTask<Integer> task = new FutureTask<Integer>(new MyCallable());

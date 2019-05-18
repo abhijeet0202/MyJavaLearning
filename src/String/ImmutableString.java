@@ -1,4 +1,4 @@
-package DataTypes;
+package String;
 
 public class ImmutableString {
 
