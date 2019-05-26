@@ -41,7 +41,7 @@ class MultipleAnnotations {
 			for (Annotation a : anno)
 				System.out.println(a);
 			System.out.println("*****************************************************************************");
-			//Fetching all the Method level Annotation and assignning  it to Array
+			//Fetching all the Method level Annotation and assigning  it to Array
 			//Method method = multipleAnnotations.getClass().getMethod("myFunction");
 			//anno = method.getAnnotations();			
 			anno = multipleAnnotations.getClass().getMethod("myFunction").getAnnotations();
