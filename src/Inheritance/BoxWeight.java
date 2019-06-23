@@ -1,6 +1,6 @@
 package Inheritance;
 
-class BoxWeight extends Box{
+class BoxWeight extends Box1{
 	double weight;
 	
 	//Constructor of Box Weight

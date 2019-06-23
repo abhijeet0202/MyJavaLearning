@@ -6,7 +6,7 @@ public class ReferenceObject {
 		
 		BoxWeight boxWeightObj = new BoxWeight(2, 2, 2, 12.2);
 		System.out.println("boxWeightObj:: "+boxWeightObj);
-		Box boxobj = new Box();
+		Box1 boxobj = new Box1();
 		System.out.println("boxobj:: "+boxobj);
 		
 		double volume = boxWeightObj.volume();
