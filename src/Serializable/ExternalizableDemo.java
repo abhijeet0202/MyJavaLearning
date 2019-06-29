@@ -23,7 +23,7 @@ class ExternalizableItem implements Externalizable{
 		System.out.println("Default Constructor Called");;
 	}
 	public ExternalizableItem(String name, int year) {
-		this.name = name;
+		ExternalizableItem.name = name;
 		this.year = year;
 		age = 10;
 	}

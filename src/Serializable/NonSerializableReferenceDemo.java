@@ -33,14 +33,6 @@ class SerializableReference implements Serializable {
 		return ("SerializableReference: Year: " + year + ", Age: " + age + "\t"+ nonSerializableReference);
 	}
 	
-	
-
-	public SerializableReference(int year, NonSerializableReference nonSerializableReference) {
-		this.nonSerializableReference = nonSerializableReference;
-		this.year = year;
-		age = 10;
-	}
-
 	public SerializableReference() {
 		this.year = 1982;
 		age = 10;
