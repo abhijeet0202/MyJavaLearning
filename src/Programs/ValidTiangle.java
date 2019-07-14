@@ -1,4 +1,4 @@
-package Practice;
+package Programs;
 
 public class ValidTiangle {
 

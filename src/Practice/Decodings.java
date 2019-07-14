@@ -2,8 +2,6 @@ package Practice;
 
 import java.math.BigInteger;
 
-import org.apache.commons.lang3.StringUtils;
-
 class Decodings {
 
 	private BigInteger count(String input, int index, int length) {
@@ -37,6 +35,5 @@ class Decodings {
 	public static void main(String[] args) throws java.lang.Exception {
 		String result = new Decodings().countDecodings("1215");
 		System.out.println(result);
-		System.out.println(StringUtils.isNumeric("123"));
 	}
 }
