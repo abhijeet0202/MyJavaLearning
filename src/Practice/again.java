@@ -1,16 +1,23 @@
 package Practice;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class again {
 	
 	public static void main(String[] args) {
-		again a = new again();
-		try{a.check();
-		}catch(Exception ex){
-			System.out.println("catch block 1");
-		}
+		List<String> obj = new ArrayList<>();
+		obj.add("Abhi");
 		
+		Iterator<String> ite = obj.iterator();
+		
+		obj.remove(0);
+		
+		while(ite.hasNext()){
+			System.out.println(ite.next());
+		}
 	}
 	void check() throws Exception{
 		try{

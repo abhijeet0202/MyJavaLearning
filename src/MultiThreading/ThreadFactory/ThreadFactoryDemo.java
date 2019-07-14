@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.ThreadFactory;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;

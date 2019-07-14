@@ -13,13 +13,6 @@ public class ThreadsPrintNumInSeq {
 		for (int i = 1;i <=numOfThreads;i++){
 			new Thread(new Printer(i, numOfThreads), "T"+i).start();;
 		}
-		//Thread t1 = new Thread(new Printer(1, 3), "T1");
-		//Thread t2 = new Thread(new Printer(2, 3), "T2");
-		//Thread t3 = new Thread(new Printer(3, 3), "T3");
-
-		//t1.start();
-		//t3.start();
-		//t2.start();
 	}
 
 }
@@ -40,20 +33,16 @@ class Printer implements Runnable {
 	}
 
 	private void print() {
-		//System.out.println(0/3);
 		try {
 			while (true) {
 				
 				synchronized (number) {
-					//System.out.println(number.get());
 					if ((number.get() % numOfThreads == this.threadId) || ((number.get() % numOfThreads == 0)&&(this.threadId == numOfThreads))){
 						System.out.println("Thread ID: "+threadId+ "Print: "+number.getAndIncrement());
 						number.notifyAll();
-//						Thread.currentThread().destroy();
-						//monitor.wait();
 					}else{
-						//System.out.println("Thread ID: "+threadId + "current value:" +number.get());
-						Thread.sleep(1000);
+						System.out.println("Thread ID: "+threadId + "current value:" +number.get());
+						Thread.sleep(100);
 					}
 
 				}

@@ -22,7 +22,7 @@ public class LockUnlockDemo implements Runnable{
 		}
 	}
 	public static void main(String[] args) {
-		final int threadCount = 5;
+		final int threadCount = 7;
 		final ExecutorService service = Executors.newFixedThreadPool(threadCount);
 		final LockUnlockDemo task = new LockUnlockDemo();
 		for (int i=0; i< threadCount; i++) {

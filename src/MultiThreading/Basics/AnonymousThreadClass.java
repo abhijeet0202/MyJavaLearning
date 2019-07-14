@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.Basics;
 
 public final class AnonymousThreadClass {
 

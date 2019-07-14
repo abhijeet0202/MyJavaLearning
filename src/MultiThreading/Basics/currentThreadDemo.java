@@ -1,7 +1,7 @@
 /**
  * 
  */
-package MultiThreading;
+package MultiThreading.Basics;
 
 /**
  * @author abhibane

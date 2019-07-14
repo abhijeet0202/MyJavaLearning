@@ -2,11 +2,11 @@ package Practice;
 
 public class OverloadingDemo {
 	
-	public void print(Object o){
+	private static void print(Object o){
 		System.out.println("Object");
 	}
 	
-	public void print(String str){
+	private static void print(String str){
 		System.out.println("String");
 	}
 	
@@ -16,7 +16,7 @@ public class OverloadingDemo {
 
 	public static void main(String[] args) {
 		OverloadingDemo demo = new OverloadingDemo();
-		demo.print(null);
+		print(10);
 
 	}
 
