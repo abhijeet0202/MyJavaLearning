@@ -33,7 +33,7 @@ class Decodings {
 	}
 
 	public static void main(String[] args) throws java.lang.Exception {
-		String result = new Decodings().countDecodings("1215");
+		String result = new Decodings().countDecodings("1265");
 		System.out.println(result);
 	}
 }

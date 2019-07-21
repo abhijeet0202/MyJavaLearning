@@ -39,7 +39,7 @@ package Programs;
  *
  *  Input : n = 13
  *  Output : 5
- *  We can reach 10 in 4 steps,  -1, 2, 5, 9, 13
+ *  We can reach 13 in 5 steps,  1, -1, 2, 5, 9, 13
  *  
  *  		  			0
  *           		  /   \

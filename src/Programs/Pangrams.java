@@ -11,9 +11,9 @@ public class Pangrams {
 			s = s.replace(" ", "");
 			if (isPangram(s)) {
 
-				result.append("1");
+				result.append("\""+s +"\"" +" is Panagram\n");
 			} else {
-				result.append("0");
+				result.append("\""+s +"\"" +" is Not a Panagram\n");
 			}
 		}
 		return result.toString();
@@ -28,7 +28,7 @@ public class Pangrams {
 			if (Character.isWhitespace(b)) {
 				continue;
 			}
-
+			//exception handling when putting numeric or CAPITAL 
 			flag[b - 97] = true;
 		}
 		return isAllSet(flag);
@@ -46,8 +46,8 @@ public class Pangrams {
 
 	public static void main(String[] args) {
 
-		String r = isPangram(new String[] { "abcdefghijklmnopqrstuv wx   yz   ", "qwert yuioplk jhgfdsazxcv bnm",
-				"dffffffffffffffffffffffffffff" });
+		//String r = isPangram(new String[] { "abcdefghijklmnopqrstuv wx   yz   ", "qwert yuioplk jhgfdsazxcv bnm",	"dffffffffffffffffffffffffffff" });
+		String r = isPangram(new String[] { "the quick brown fox jumps over a lazy dog" });
 		System.out.println(r);
 	}
 

@@ -46,6 +46,7 @@ public class Person implements Comparable<Person> {
 		myList.add(new Person(1, "Robert"));
 		myList.add(new Person(2, "Gobert"));
 		myList.add(new Person(3, "Abhijeet"));
+		
 		Collections.sort(myList, new SortPersonName());
 		for (Person person : myList) {
 			 System.out.println("My name is "+person.getPersonName() + " and id is "+person.getPersonId());

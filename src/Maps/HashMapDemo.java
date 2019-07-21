@@ -23,6 +23,8 @@ final class HashMapDemo {
 		myMap.put(3, "Aryan");
 		myMap.put(4, "Abhijeet");
 		myMap.put(5, "Abhijeet");
+		myMap.put(null, "Food");
+		myMap.put(null, "Cult");
 		
 		System.out.println(myMap);
 	}

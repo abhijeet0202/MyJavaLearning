@@ -44,7 +44,7 @@ public class CommonManager {
 		return name;
 	}
 	
-	public ArrayList<CommonManager> getReports(){
+	public ArrayList<CommonManager> myRepotee(){
 		return reports;
 	}
 	
@@ -60,7 +60,7 @@ public class CommonManager {
 		int count =0;
 		CommonManager temp = null;
 		
-		for (CommonManager current : ceo.getReports()){
+		for (CommonManager current : ceo.myRepotee()){
 			CommonManager res = closestCommonManager(current, employee1, employee2);
 			
 			if (res != null){

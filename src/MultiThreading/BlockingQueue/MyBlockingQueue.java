@@ -2,6 +2,7 @@ package MultiThreading.BlockingQueue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.SynchronousQueue;
 
 class BlockingQueueProducer implements Runnable {
 	private final BlockingQueue<String> queue;
@@ -17,6 +18,12 @@ class BlockingQueueProducer implements Runnable {
 			queue.put("2");
 			Thread.sleep(1000);
 			queue.put("3");
+			Thread.sleep(1000);
+			queue.put("4");
+			Thread.sleep(1000);
+			queue.put("5");
+			Thread.sleep(1000);
+			queue.put("6");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -32,9 +39,9 @@ class BlockingQueueConsumer implements Runnable {
 
 	public void run() {
 		try {
-			System.out.println(queue.take());
-			System.out.println(queue.take());
-			System.out.println(queue.take());
+			System.out.println(Thread.currentThread().getName()+"----"+queue.take());
+			System.out.println(Thread.currentThread().getName()+"----"+queue.take());
+			System.out.println(Thread.currentThread().getName()+"----"+queue.take());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -45,8 +52,8 @@ class BlockingQueueConsumer implements Runnable {
 public final class MyBlockingQueue {
 
 	public static void main(String[] args) {
-		BlockingQueue<String> myArrayBlockingQueue = new ArrayBlockingQueue<String>(2);
-		// BlockingQueue<Integer> mySynchronousQueue = new SynchronousQueue<>();
+		//BlockingQueue<String> myArrayBlockingQueue = new ArrayBlockingQueue<String>(2);
+		BlockingQueue<String> myArrayBlockingQueue = new SynchronousQueue<>();
 
 		BlockingQueueProducer p = new BlockingQueueProducer(myArrayBlockingQueue);
 

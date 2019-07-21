@@ -18,6 +18,8 @@ public final class CountDownLatchDemo {
 		cacheService.start(); // separate thread will initialize CacheService
 		alertService.start(); // another thread for AlertService initialization
 		validationService.start();
+		
+		
 
 		/* application should not start processing any thread until all service is up and ready to do there job.
 		   Countdown latch is idle choice here, main thread will start with count 3 and wait until count reaches zero. each thread once up and read will
@@ -32,6 +34,7 @@ public final class CountDownLatchDemo {
 			ie.printStackTrace();
 		}
 	}
+	
 }
 
 /**
