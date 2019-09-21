@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Maps;
+package Compare;
 
 import java.util.Comparator;
 import java.util.Map;

@@ -15,9 +15,9 @@ public class CyclicBarrierDemo {
 		Thread validationService = new Thread(new cbService("ValidationService", 1000, cb));
 		
 		
-		Thread cacheService1 = new Thread(new cbService("CacheService1", 1000, cb));
-		Thread alertService1 = new Thread(new cbService("AlertService1", 1000, cb));
-		Thread validationService1 = new Thread(new cbService("ValidationService1", 1000, cb));
+		Thread cacheService1 = new Thread(new cbService("CacheService1", 10000, cb));
+		Thread alertService1 = new Thread(new cbService("AlertService1", 10000, cb));
+		Thread validationService1 = new Thread(new cbService("ValidationService1", 10000, cb));
 
 		cacheService.start(); // separate thread will initialize CacheService
 		alertService.start(); // another thread for AlertService initialization
