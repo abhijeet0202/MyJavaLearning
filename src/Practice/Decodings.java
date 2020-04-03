@@ -33,7 +33,9 @@ class Decodings {
 	}
 
 	public static void main(String[] args) throws java.lang.Exception {
-		String result = new Decodings().countDecodings("1265");
-		System.out.println(result);
+		//String result = new Decodings().countDecodings("1265");
+		//System.out.println(result);
+		
+		System.out.printf("My anme is %s and age is %s", "Abhijeet", 24);
 	}
 }

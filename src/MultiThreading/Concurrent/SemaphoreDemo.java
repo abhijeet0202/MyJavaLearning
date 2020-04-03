@@ -8,11 +8,12 @@ class SharedResources{
 public class SemaphoreDemo {
 
 	public static void main(String[] args) {
-		Semaphore semaphore = new Semaphore(1, true);
+		Semaphore semaphore = new Semaphore(2, true);
 		
 		new Thread(new SemaphoreIncrement(semaphore,"Thread1")).start();
 		new Thread(new SemaphoreIncrement(semaphore,"Thread2")).start();
 		new Thread(new SemaphoreIncrement(semaphore,"Thread3")).start();
+		new Thread(new SemaphoreIncrement(semaphore,"Thread4")).start();
 
 	}
 

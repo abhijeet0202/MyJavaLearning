@@ -26,8 +26,8 @@ class Subclass extends Superclass{
 	Subclass(){
 		System.out.println("Inside Subclass");
 	}
-	void printijk(){
-		System.out.println("Value of i:"+i +" and j:" +j+" and k:"+k);
+	void printij(){
+		System.out.println("AAValue of i:"+i +" and j:" +j+" and k:"+k);
 	}
 }
 public class SimpleInheritance {
@@ -36,12 +36,12 @@ public class SimpleInheritance {
 		Superclass superObj =new Superclass();
 		superObj.printij();
 		
-		Subclass subObj = new Subclass();
-		subObj.i = 10;
-		subObj.j = 20;
+		//Subclass subObj = new Subclass();
+		//subObj.i = 10;
+		//subObj.j = 20;
 		
 		//subObj.str = "Abhijeet";  //The field Superclass.str is not visible
-		subObj.printijk();
+		//subObj.printijk();
 
 	}
 
