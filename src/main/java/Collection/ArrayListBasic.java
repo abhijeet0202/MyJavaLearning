@@ -10,7 +10,6 @@ final class ArrayListBasic {
 	public static void main(String[] args) {
 		ArrayList<String> obj = new ArrayList<String>();
 		System.out.println("Initial size of ArrayList is: "+obj.size() );
-		
 		/*
 		 * Inserts the specified element at the specified position in this list.
 		 * Shifts the element currently at that position (if any) and any subsequent elements to the right.

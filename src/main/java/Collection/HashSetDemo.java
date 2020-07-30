@@ -1,6 +1,7 @@
 package Collection;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public final class HashSetDemo {
@@ -25,6 +26,7 @@ public final class HashSetDemo {
 		
 		
 		System.out.println("Value Present In HashSet is: "+hs);
+		
 		
 	}
 

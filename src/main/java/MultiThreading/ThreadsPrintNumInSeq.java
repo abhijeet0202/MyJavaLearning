@@ -40,9 +40,10 @@ class Printer implements Runnable {
 					if ((number.get() % numOfThreads == this.threadId) || ((number.get() % numOfThreads == 0)&&(this.threadId == numOfThreads))){
 						System.out.println("Thread ID: "+threadId+ "Print: "+number.getAndIncrement());
 						number.notifyAll();
+						Thread.sleep(1000);
 					}else{
 						System.out.println("Thread ID: "+threadId + "current value:" +number.get());
-						Thread.sleep(100);
+						number.wait();
 					}
 
 				}
