@@ -3,6 +3,9 @@
  */
 package Generic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author abhibane
  *
@@ -27,6 +30,11 @@ class SampleGenericMethod {
 		System.out.println(t+" is not present inside array");
 		return false;
 	}
+	
+	public <T> void printArray(List<T> myArray) {
+		if(!myArray.isEmpty())
+			System.out.println(myArray);
+	}
 	/**
 	 * @param args
 	 */
@@ -40,6 +48,17 @@ class SampleGenericMethod {
 		String sInt[] = {"One","Two","Three","Four","Five","Six"};
 		
 		SampleGenericMethod.isIn("Seven", sInt);
+		
+		SampleGenericMethod obj = new SampleGenericMethod();
+		ArrayList<Integer> obj1 = new ArrayList<>();
+		obj1.add(12);
+		obj1.add(13);
+		obj.printArray(obj1);
+		
+		ArrayList<String> obj2 = new ArrayList<>();
+		obj2.add("Abhi");
+		obj2.add("Raba");
+	obj.printArray(obj2);
 	}
 
 }
