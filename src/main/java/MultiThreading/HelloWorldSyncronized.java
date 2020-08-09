@@ -31,6 +31,11 @@ class ValidQueue{
 		System.out.println("World :"+ value);
 		valueSet = true;
 		notify();
+		try {
+			Thread.sleep(10000);
+		}catch(InterruptedException ex) {
+			
+		}
 		
 	}
 }
