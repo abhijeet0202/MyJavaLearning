@@ -8,18 +8,33 @@ import java.util.function.Predicate;
 
 class Filter {
 	public static Predicate<String> nameStartingWithPrefix(String prefix) {
+		return str -> str.startsWith(prefix);
 	}
 }
 
 class Mapper {
 
 	public static Function<String, CharacterCount> getDistinctCharactersCount() {
+		
+		return str ->  new CharacterCount(str, str.length());
 	}
 
 }
 
 class CharacterCount {
-
+	private final String name;
+	private final Integer distinctCharacterCount;
+	
+	public CharacterCount(String name,Integer distinctCharacterCount) {
+		this.name = name;
+		this.distinctCharacterCount = distinctCharacterCount;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\""+this.name+"\" has"+ this.distinctCharacterCount+" distinct char";
+	}
 }
 
 public class Solution {
