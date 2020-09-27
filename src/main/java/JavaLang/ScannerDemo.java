@@ -10,6 +10,7 @@ public class ScannerDemo {
 		ScannerDemo.func(sc.next().charAt(0));
 		//data.charValue() - 'A';
 		//System.out.println(data.charValue() - 'A');
+		sc.close();
 	}
 	
 	public static void func (Character data){

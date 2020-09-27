@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.sun.javafx.binding.Logging;
 
+@SuppressWarnings("restriction")
 public class BasicClassLoader {
 
 	public static void main(String[] args) {
