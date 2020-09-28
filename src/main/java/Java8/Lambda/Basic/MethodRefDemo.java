@@ -1,4 +1,4 @@
-package Lambda.Basic;
+package Java8.Lambda.Basic;
 
 interface StringFunc{
 	String func(String str);

@@ -1,4 +1,4 @@
-package Lambda.Basic;
+package Java8.Lambda.Basic;
 class Instance{
 	int i;
 	String str;

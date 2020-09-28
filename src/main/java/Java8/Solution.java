@@ -47,5 +47,6 @@ public class Solution {
 
 		names.stream().filter(Filter.nameStartingWithPrefix(scanner.nextLine()))
 				.map(Mapper.getDistinctCharactersCount()).forEachOrdered(System.out::println);
+		//.forEachOrdered(System.out::println);
 	}
 }

@@ -1,4 +1,4 @@
-package Lambda.Basic;
+package Java8.Lambda.Basic;
 
 interface MyNumber {
 	double getNumber();

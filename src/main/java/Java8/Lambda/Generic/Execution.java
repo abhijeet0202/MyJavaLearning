@@ -1,4 +1,4 @@
-package Lambda.Generic;
+package Java8.Lambda.Generic;
 
 interface GenericExecution<T>{
 	T execute(T t);

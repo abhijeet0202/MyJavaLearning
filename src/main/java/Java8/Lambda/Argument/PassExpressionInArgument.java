@@ -1,4 +1,4 @@
-package Lambda.Argument;
+package Java8.Lambda.Argument;
 
 interface StringOperation {
 	String operate(String str);

@@ -1,4 +1,4 @@
-package Lambda.BlockExpression;
+package Java8.Lambda.BlockExpression;
 
 interface Reverse{
 	String reverse(String str);

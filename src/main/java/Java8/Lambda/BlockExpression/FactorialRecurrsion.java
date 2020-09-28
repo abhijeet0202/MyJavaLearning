@@ -1,4 +1,4 @@
-package Lambda.BlockExpression;
+package Java8.Lambda.BlockExpression;
 
 interface Factorial {
 	int facto(int fact);
