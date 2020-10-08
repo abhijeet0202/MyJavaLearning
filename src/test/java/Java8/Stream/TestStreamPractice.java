@@ -18,5 +18,16 @@ public class TestStreamPractice {
 		GroupingBy groupingBy = new GroupingBy();
 		System.out.println(groupingBy.groupingByDemo());
 	}
+	
+	@Test
+	public void testReduce_addOptionalFindMaxUsingReduce() {
+		Reduce reduce = new Reduce();
+		System.out.println(reduce.addOptionalFindMaxUsingReduce());
+	}
 
+	@Test
+	public void testReduce_addOptionalFindMinUsingReduce() {
+		Reduce reduce = new Reduce();
+		System.out.println(reduce.addOptionalFindMinUsingReduce());
+	}
 }

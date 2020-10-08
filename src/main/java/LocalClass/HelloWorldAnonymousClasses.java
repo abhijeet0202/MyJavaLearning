@@ -1,7 +1,5 @@
 package LocalClass;
 
-import java.util.function.BiConsumer;
-
 public class HelloWorldAnonymousClasses {
 	  
     interface HelloWorld {

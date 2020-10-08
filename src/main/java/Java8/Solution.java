@@ -15,7 +15,7 @@ class Filter {
 class Mapper {
 
 	public static Function<String, CharacterCount> getDistinctCharactersCount() {
-		
+		//return str -> str.flatMap(Arrays::Stream).distinct().collect();
 		return str ->  new CharacterCount(str, str.length());
 	}
 
