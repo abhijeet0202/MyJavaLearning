@@ -3,7 +3,7 @@ package Collection;
 import java.util.ArrayList;
 
 final class ArrayListDemotoArray {
-
+	
 	public static void main(String[] args) {
 		ArrayList<String> myObj = new ArrayList<String>();
 		

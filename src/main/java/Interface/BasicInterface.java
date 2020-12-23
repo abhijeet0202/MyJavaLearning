@@ -4,6 +4,7 @@
 package Interface;
 
 interface testBasic{
+	
 	int finalStaticVaraible =2;
 	
 	void checkProperty();
