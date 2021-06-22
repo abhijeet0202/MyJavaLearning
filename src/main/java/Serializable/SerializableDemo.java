@@ -9,8 +9,9 @@ import java.io.Serializable;
 class SerializableItem implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	static int age;
-	transient static String name;
+	String name;
 	transient int year;
 
 	public String toString() {
@@ -19,11 +20,10 @@ class SerializableItem implements Serializable {
 
 	public SerializableItem() {
 		System.out.println("Default Constructor Called");
-		;
 	}
 
-	public SerializableItem(String name, int year) {
-		this.name = name;
+	public SerializableItem(String nme, int year) {
+		this.name = nme;
 		this.year = year;
 		age = 10;
 	}

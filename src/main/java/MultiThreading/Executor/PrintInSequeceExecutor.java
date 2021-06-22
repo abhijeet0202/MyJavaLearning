@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class PrintInSequeceExecutor {
 
 	public static void main(String[] args) {
+		
 		System.out.println("Enter Number oF Threads");
 		Scanner scan = new Scanner(System.in);
 		int nThreads = scan.nextInt();

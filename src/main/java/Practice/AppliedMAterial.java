@@ -4,8 +4,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class AppliedMAterial {
+	
+	static int noOfShops = 0;
+	static int noOfQueries = 0;
+	static int[] sweetnessLevel = new int[noOfShops];
+	static int[] cost= null;
+	static boolean[] isStocked = null;
 
 	List<String> myList = new ArrayList<>();
 	Map<String, String> myMay = new HashMap<String, String>();
@@ -44,65 +51,86 @@ public class AppliedMAterial {
 //					minCost(costCols.get(finalC), finalR, finalC - 1));
 //	}
 
+	public long[] fix(long arr[]) {
+		arr[1] = 7;
+		return arr;
+
+	}
+
+	void start() {
+		long[] a1 = { 3, 4, 5 };
+		long[] a2 = fix(a1);
+		System.out.println(a1[1]);
+		System.out.println(a2[0] + a2[1]);
+	}
+
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		String line1 = scan.nextLine();
+		String[] str = line1.split(" ");
+		noOfShops = Integer.valueOf(str[0]);
 		
-		int arr[] = new int[] {1,2,3,4,5};
-		int ii =2;
-		int j =4;
-		
-		//logic
-		int myarr[] = new int[arr.length];
-		myarr[0] = arr[0];
-		for (int i=1;i <arr.length;i++) {
-			myarr[i] = arr[i]+myarr[i-1];
+		isStocked = new boolean[noOfShops];
+		noOfQueries = Integer.valueOf(str[1]);
+
+		String line2 = scan.nextLine();
+		String[] cost1 = line2.split(" ");
+		int j=0;
+		cost = new int[noOfShops];
+		for(String s: cost1) {
+			cost[j] = Integer.valueOf(s);
+			j++;
 		}
-		
-		//First create an extra array where we will keep sum of all the index
-		if(ii <0) {
-			int answer = myarr[j];
+
+		String line3 = scan.nextLine();
+		String[] sweetnessLevel1 = line3.split(" ");
+		j=0;
+		sweetnessLevel = new int[noOfShops];
+		for(String s: sweetnessLevel1) {
+			sweetnessLevel[j] = Integer.parseInt(s);
+			j++;
+		}
+
+		List<String> queries = new ArrayList<>();
+		for (int i = 0; i < noOfQueries; i++) {
+			queries.add(scan.nextLine());
+		}
+
+		for (String query : queries) {
+			String[] queryBreakUp = query.split(" ");
+			if (queryBreakUp[0].equals("1")) {
+				tellSweteness(queryBreakUp[1], queryBreakUp[2], queryBreakUp[3]);
+			} else {
+
+				modifyStock(queryBreakUp[1], queryBreakUp[2]);
+			}
+		}
+		System.out.println(queries);
+
+	}
+
+	public static void tellSweteness(String fIndex1, String lIndex1, String upperLimit1) {
+		int count =0;
+		int upperLimit = Integer.valueOf(upperLimit1);
+		int fIndex = Integer.valueOf(fIndex1);
+		int lIndex = Integer.valueOf(lIndex1);
+		for (int i=fIndex-1; i<lIndex ;i++) {
+			if (cost[i] <= upperLimit && !isStocked[i]) {
+				count+=sweetnessLevel[i];
+			}
+		}
+		System.out.println(count);
+	}
+
+	public static void modifyStock(String index, String isStock) {
+		//int fIndex = Integer.valueOf(fIndex1);
+		//int lIndex = Integer.valueOf(lIndex1);
+		if(isStock.contains("0")) {
+			isStocked[Integer.valueOf(index)-1] = true;
 		}else {
-			int answer = myarr[j]- myarr[ii-1];
+			isStocked[Integer.valueOf(index)-1] = false;
 		}
-		
-		
-//		try {
-//			Cipher.getMaxAllowedKeyLength("AES");
-//		} catch (NoSuchAlgorithmException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
-		// Question1 : Start
-//		costRows = new ArrayList<Integer>();
-//		costRows.add(3);
-//		costRows.add(1);
-//		costRows.add(2);
-//		costRows.add(3);
-//
-//		costCols = new ArrayList<Integer>();
-//		costCols.add(3);
-//		costCols.add(7);
-//		costCols.add(8);
-//		costCols.add(9);
-		// Question1 : END
-
-		// Question2 : Start
-//		
-//		  costRows = new ArrayList<Integer>(); 
-//		  costRows.add(0);
-//		  costRows.add(2); 
-//		  costRows.add(5);
-//		  
-//		 
-//		 costCols = new ArrayList<Integer>();
-//		 costCols.add(0);
-//		 costCols.add(6);
-//		 costCols.add(1);
-//		 
-//		
-//		// Question2 : END
-//		System.out.println(AppliedMAterial.minCost(0, finalR, finalC));
-
 	}
 
 }

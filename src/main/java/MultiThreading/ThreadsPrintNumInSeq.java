@@ -2,6 +2,7 @@ package MultiThreading;
 
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
 
 public class ThreadsPrintNumInSeq {
 
@@ -18,6 +19,7 @@ public class ThreadsPrintNumInSeq {
 
 class Printer implements Runnable {
 	public volatile static AtomicInteger number = new AtomicInteger(1);
+	Predicate<Integer> myCheck = threadId ->((number.get() % this.numOfThreads == threadId)|| ((number.get() % this.numOfThreads == 0) && (threadId == this.numOfThreads)));
 	int threadId;
 	int numOfThreads;
 
@@ -34,15 +36,14 @@ class Printer implements Runnable {
 	private void print() {
 		try {
 			while (true) {
-
 				synchronized (number) {
-					if ((number.get() % numOfThreads == this.threadId)
-							|| ((number.get() % numOfThreads == 0) && (this.threadId == numOfThreads))) {
+					//if ((number.get() % numOfThreads == this.threadId)|| ((number.get() % numOfThreads == 0) && (this.threadId == numOfThreads))) {
+					if(myCheck.test(threadId)) {// USing Predicate
 						System.out.println("Thread ID: " + threadId + "Print: " + number.getAndIncrement());
 						number.notifyAll();
 						Thread.sleep(1000);
 					} else {
-						System.out.println("Thread ID: " + threadId + "current value:" + number.get());
+						//System.out.println("Thread ID: " + threadId + "current value:" + number.get());
 						number.wait();
 					}
 

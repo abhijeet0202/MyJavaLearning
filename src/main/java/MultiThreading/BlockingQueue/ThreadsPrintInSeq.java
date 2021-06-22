@@ -18,8 +18,8 @@ public class ThreadsPrintInSeq {
         
         // Create named threads for the workers
         new Thread(w1, "Thread-1 - ").start();
-        new Thread(w2, "Thread-1 - ").start();
-        new Thread(w3, "Thread-1 - ").start();
+        new Thread(w2, "Thread-2 - ").start();
+        new Thread(w3, "Thread-3 - ").start();
         
         // Seed the first worker
         w1.accept(1);
