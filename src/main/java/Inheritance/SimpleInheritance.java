@@ -1,12 +1,5 @@
-/**
- * 
- */
-package Inheritance;
 
-/**
- * @author abhibane
- *
- */
+package Inheritance;
 
 //A simple example of inheritance
 class Superclass{
